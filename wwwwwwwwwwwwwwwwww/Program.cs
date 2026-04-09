@@ -112,15 +112,21 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q12
-            var result = Source.ProductList
-            .Select(p => p.Category)
-            .Distinct();
+            //var result = Source.ProductList
+            //.Select(p => p.Category)
+            //.Distinct();
 
-            
+
             #endregion
 
             #region Q13
-
+            int[] setA = { 1, 3, 5, 7, 9, 11, 13 };
+            int[] setB = { 3, 6, 9, 12, 15, 13 };
+            var result= setA.Except(setB);
+            foreach (var i in result)
+            {
+                Console.WriteLine(i);
+            }
             #endregion
 
             #region Q14
