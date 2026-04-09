@@ -18,11 +18,11 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q2
-            var result = Source.ProductList.Skip(5).Take(5).ToList();
+            //var result = Source.ProductList.Skip(5).Take(5).ToList();
             #endregion
 
             #region Q3
-
+            var result = Source.ProductList.OrderBy(p => p.UnitPrice).TakeWhile(p => p.UnitPrice < 25);
             #endregion
 
             #region Q4
