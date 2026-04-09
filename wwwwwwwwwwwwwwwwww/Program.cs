@@ -26,14 +26,28 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q4
-            var x = Source.ProductList.Where(p => p.Category == "Seafood").All(p => p.UnitsInStock > 0);
-            Console.WriteLine(x);
+            //var x = Source.ProductList.Where(p => p.Category == "Seafood").All(p => p.UnitsInStock > 0);
+            //Console.WriteLine(x);
             #endregion
 
             #region Q5
+            int[] ids = { 3, 9, 13, 18 };
+
+            var x = ids.Contains(9);
+            Console.WriteLine(x);
+            #endregion
+
+            #region Q6
 
             #endregion
 
+            #region Q7
+
+            #endregion
+
+            #region Q8
+
+            #endregion
 
             //foreach (var item in result)
             //{
