@@ -22,11 +22,12 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q3
-            var result = Source.ProductList.OrderBy(p => p.UnitPrice).TakeWhile(p => p.UnitPrice < 25);
+            //var result = Source.ProductList.OrderBy(p => p.UnitPrice).TakeWhile(p => p.UnitPrice < 25);
             #endregion
 
             #region Q4
-
+            var x = Source.ProductList.Where(p => p.Category == "Seafood").All(p => p.UnitsInStock > 0);
+            Console.WriteLine(x);
             #endregion
 
             #region Q5
@@ -34,10 +35,10 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
 
-            foreach (var item in result)
-            {
-                Console.WriteLine(item);
-            }
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
         }
     }
 }
