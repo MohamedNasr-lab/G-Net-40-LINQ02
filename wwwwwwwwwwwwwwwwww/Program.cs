@@ -12,10 +12,28 @@ namespace wwwwwwwwwwwwwwwwww
         static void Main(string[] args)
         {
             #region Q1
-            var result = Source.ProductList.OrderByDescending(p => p.UnitPrice).Take(3);
+            //var result = Source.ProductList.OrderByDescending(p => p.UnitPrice).Take(3);
 
 
             #endregion
+
+            #region Q2
+            var result = Source.ProductList.Skip(5).Take(5).ToList();
+            #endregion
+
+            #region Q3
+
+            #endregion
+
+            #region Q4
+
+            #endregion
+
+            #region Q5
+
+            #endregion
+
+
             foreach (var item in result)
             {
                 Console.WriteLine(item);
