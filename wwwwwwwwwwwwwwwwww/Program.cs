@@ -31,13 +31,23 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q5
-            int[] ids = { 3, 9, 13, 18 };
+            //int[] ids = { 3, 9, 13, 18 };
 
-            var x = ids.Contains(9);
-            Console.WriteLine(x);
+            //var x = ids.Contains(9);
+            //Console.WriteLine(x);
             #endregion
 
             #region Q6
+            var result = Source.ProductList.GroupBy(p => p.Category);
+            foreach (var item in result)
+            {
+                Console.WriteLine($"Category: {item.Key}, Count: {item.Count()}");
+                foreach (var product in item)
+                {
+                    Console.WriteLine($"   {product.ProductName}");
+                }
+
+            }
 
             #endregion
 
@@ -46,6 +56,22 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q8
+
+            #endregion
+
+            #region Q9
+
+            #endregion
+
+            #region Q10
+
+            #endregion
+
+            #region Q11
+
+            #endregion
+
+            #region Q12
 
             #endregion
 
