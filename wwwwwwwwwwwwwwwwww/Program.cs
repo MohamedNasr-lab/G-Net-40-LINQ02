@@ -100,14 +100,15 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q10
-
+            var result = Source.ProductList.Sum(p => p.UnitsInStock);
+            Console.WriteLine(result);
             #endregion
 
             #region Q11
-            var CheapestPrice=Source.ProductList.Min(p=> p.UnitPrice);
-            var ExpensivePrice = Source.ProductList.Max(p => p.UnitPrice);
-            Console.WriteLine(CheapestPrice);
-            Console.WriteLine(ExpensivePrice);
+            //var CheapestPrice=Source.ProductList.Min(p=> p.UnitPrice);
+            //var ExpensivePrice = Source.ProductList.Max(p => p.UnitPrice);
+            //Console.WriteLine(CheapestPrice);
+            //Console.WriteLine(ExpensivePrice);
             #endregion
 
             #region Q12
