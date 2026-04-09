@@ -81,22 +81,22 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q9
-            var result =
-                from c in Source.CustomerList
-                group c by c.Country into g
-                select new
-                {
-                    counter = g.Key,
-                    count = g.Count(),
-                    totalordervalue = g.Sum(c => c.Orders.Sum(o => o.Total))
-                };
-            foreach (var item in result)
-            {
-                Console.WriteLine($"Country: {item.counter}");
-                Console.WriteLine($"Count: {item.count}");
-                Console.WriteLine($"Total Order Value: {item.totalordervalue}");
-                Console.WriteLine("------------------------");
-            }
+            //var result =
+            //    from c in Source.CustomerList
+            //    group c by c.Country into g
+            //    select new
+            //    {
+            //        counter = g.Key,
+            //        count = g.Count(),
+            //        totalordervalue = g.Sum(c => c.Orders.Sum(o => o.Total))
+            //    };
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine($"Country: {item.counter}");
+            //    Console.WriteLine($"Count: {item.count}");
+            //    Console.WriteLine($"Total Order Value: {item.totalordervalue}");
+            //    Console.WriteLine("------------------------");
+            //}
             #endregion
 
             #region Q10
@@ -104,7 +104,10 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q11
-
+            var CheapestPrice=Source.ProductList.Min(p=> p.UnitPrice);
+            var ExpensivePrice = Source.ProductList.Max(p => p.UnitPrice);
+            Console.WriteLine(CheapestPrice);
+            Console.WriteLine(ExpensivePrice);
             #endregion
 
             #region Q12
