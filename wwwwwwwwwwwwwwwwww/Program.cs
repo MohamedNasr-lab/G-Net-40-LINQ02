@@ -38,21 +38,35 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q6
-            var result = Source.ProductList.GroupBy(p => p.Category);
-            foreach (var item in result)
-            {
-                Console.WriteLine($"Category: {item.Key}, Count: {item.Count()}");
-                foreach (var product in item)
-                {
-                    Console.WriteLine($"   {product.ProductName}");
-                }
+            //var result = Source.ProductList.GroupBy(p => p.Category);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine($"Category: {item.Key}, Count: {item.Count()}");
+            //    foreach (var product in item)
+            //    {
+            //        Console.WriteLine($"   {product.ProductName}");
+            //    }
 
-            }
+            //}
 
             #endregion
 
             #region Q7
+            var result=Source.ProductList.GroupBy(p => p.Category).Select(g => new
+            {
+                Category = g.Key,
+                ProductNames = g.Select(p => p.ProductName)
+            });
 
+            foreach (var item in result)
+            {
+                Console.WriteLine($"Category: {item.Category}");
+
+                foreach (var name in item.ProductNames)
+                {
+                    Console.WriteLine($"   {name}");
+                }
+            }
             #endregion
 
             #region Q8
