@@ -70,18 +70,33 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q8
-            var result = Source.ProductList.GroupBy(p => p.Category)
-             .Where(g => g.Count() > 3)
-             .Select(g => g.Key);
+            //var result = Source.ProductList.GroupBy(p => p.Category)
+            // .Where(g => g.Count() > 3)
+            // .Select(g => g.Key);
 
-            foreach(var category in result) 
-               {
-                Console.WriteLine(category);
-            }
+            //foreach(var category in result) 
+            //   {
+            //    Console.WriteLine(category);
+            //}
             #endregion
 
             #region Q9
-
+            var result =
+                from c in Source.CustomerList
+                group c by c.Country into g
+                select new
+                {
+                    counter = g.Key,
+                    count = g.Count(),
+                    totalordervalue = g.Sum(c => c.Orders.Sum(o => o.Total))
+                };
+            foreach (var item in result)
+            {
+                Console.WriteLine($"Country: {item.counter}");
+                Console.WriteLine($"Count: {item.count}");
+                Console.WriteLine($"Total Order Value: {item.totalordervalue}");
+                Console.WriteLine("------------------------");
+            }
             #endregion
 
             #region Q10
