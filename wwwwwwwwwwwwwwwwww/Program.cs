@@ -100,8 +100,8 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q10
-            var result = Source.ProductList.Sum(p => p.UnitsInStock);
-            Console.WriteLine(result);
+            //var result = Source.ProductList.Sum(p => p.UnitsInStock);
+            //Console.WriteLine(result);
             #endregion
 
             #region Q11
@@ -112,9 +112,28 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q12
+            var result = Source.ProductList
+            .Select(p => p.Category)
+            .Distinct();
+
+            
+            #endregion
+
+            #region Q13
 
             #endregion
 
+            #region Q14
+
+            #endregion
+
+            #region Q15
+
+            #endregion
+
+            #region Q16
+
+            #endregion
             //foreach (var item in result)
             //{
             //    Console.WriteLine(item);
