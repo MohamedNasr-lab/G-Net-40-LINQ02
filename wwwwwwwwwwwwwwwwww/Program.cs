@@ -130,19 +130,23 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q14
-            string[] list1 = { "Germany", "France", "UK", "Spain" };
-            string[] list2 = { "france", "SPAIN", "Italy" };
-            var result = list1.Except(list2, StringComparer.OrdinalIgnoreCase);
+            //string[] list1 = { "Germany", "France", "UK", "Spain" };
+            //string[] list2 = { "france", "SPAIN", "Italy" };
+            //var result = list1.Except(list2, StringComparer.OrdinalIgnoreCase);
 
-            foreach (var item in result)
-            {
-                Console.WriteLine(item);
-            }
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
             #endregion
 
             #region Q15
+            var dict = Source.ProductList
+            .ToDictionary(p => p.ProductID);
 
+            var product = dict[18];
+            Console.WriteLine(product.ProductName);
             #endregion
 
             #region Q16
