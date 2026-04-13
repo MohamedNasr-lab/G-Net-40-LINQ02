@@ -142,20 +142,41 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q15
-            var dict = Source.ProductList
-            .ToDictionary(p => p.ProductID);
+            //var dict = Source.ProductList
+            //.ToDictionary(p => p.ProductID);
 
-            var product = dict[18];
-            Console.WriteLine(product.ProductName);
+            //var product = dict[18];
+            //Console.WriteLine(product.ProductName);
             #endregion
 
             #region Q16
+            //var result = Source.ProductList.Any(p => p.UnitPrice > 50);
+            //Console.WriteLine(result);
+            #endregion
+
+            #region Q17
+            var result = Source.ProductList.FirstOrDefault(p => p.UnitPrice > 500);
+            Console.WriteLine(result);
+            #endregion
+
+            #region Q18
 
             #endregion
-            //foreach (var item in result)
-            //{
-            //    Console.WriteLine(item);
-            //}
+
+            #region Q19
+
+            #endregion
+
+            #region Q20
+
+            #endregion
+
+            #region Q21
+
+            #endregion
+
+
+            
         }
     }
 }
