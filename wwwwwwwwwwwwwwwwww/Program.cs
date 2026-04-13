@@ -160,11 +160,11 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q18
-            var result = Enumerable.Range(1, 10).Select(N => N * 7);
-            foreach (var item in result)
-            {
-                Console.WriteLine(item);
-            }
+            //var result = Enumerable.Range(1, 10).Select(N => N * 7);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
             #region Q19
@@ -176,7 +176,18 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q20
-
+            var result = Source.ProductList
+            .Select(p => p.ProductName)
+            .Take(3)
+            .Concat(
+                Source.CustomerList
+                .Select(c => c.CompanyName)
+                .Take(3)
+            );
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
             #endregion
 
             #region Q21
