@@ -160,15 +160,19 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q18
-
-            #endregion
-
-            #region Q19
-            var result = Enumerable.Range(1, 30).Where(N => N % 2 == 0);
+            var result = Enumerable.Range(1, 10).Select(N => N * 7);
             foreach (var item in result)
             {
                 Console.WriteLine(item);
             }
+            #endregion
+
+            #region Q19
+            //var result = Enumerable.Range(1, 30).Where(N => N % 2 == 0);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
             #region Q20
