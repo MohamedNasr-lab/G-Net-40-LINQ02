@@ -155,8 +155,8 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q17
-            var result = Source.ProductList.FirstOrDefault(p => p.UnitPrice > 500);
-            Console.WriteLine(result);
+            //var result = Source.ProductList.FirstOrDefault(p => p.UnitPrice > 500);
+            //Console.WriteLine(result);
             #endregion
 
             #region Q18
@@ -164,7 +164,11 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
             #region Q19
-
+            var result = Enumerable.Range(1, 30).Where(N => N % 2 == 0);
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
             #endregion
 
             #region Q20
@@ -176,7 +180,7 @@ namespace wwwwwwwwwwwwwwwwww
             #endregion
 
 
-            
+
         }
     }
 }
